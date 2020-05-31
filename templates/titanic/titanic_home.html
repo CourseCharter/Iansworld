@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<style>
+
+</style>
+
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <section class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">
+                      The Titanic survival prediction is the starting point for testing out machine learning knowledge.
+                    </p>
+                  </div>
+                </div>
+                <div class="card card-primary card-outline">
+                  <div class="card-header">
+                    <h5 class="card-title">Test Data Results</h5>
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">
+                        This model is a Keras sequential model using an Adam optmizer using 80% of the data as test. Here we 
+                        are able to see the relationships between various features in the data.
+                      </p>
+                    <ul class = "fa-ul">
+                      <li><span class="fa-li"><i class="fa fa-bolt" style=" color:#32CD32 "></i></span>5 primary features are ultimately used for testing</li>
+                      <li><span class="fa-li"><i class="fa fa-bolt" style=" color:#32CD32 "></i></span>Over 800 passenger records are tested on</li>
+                      <li><span class="fa-li"><i class="fa fa-bolt" style=" color:#32CD32 "></i></span>The network uses 3 layers for prediction</li>
+                    </ul>
+                    <p class="card-text">
+                    The final result is 81% accurate! I have created a form so you can play around with the predictions yourself!
+                    </p>
+                  </div>
+                </div><!-- /.card -->
+              </div>
+              <div class="col-lg-6">
+                    <img class="mx-auto d-block" style="height:300px" src="{% static 'titanic/titanic.png' %}">
+              </div>
+            </div>  
+          </section>
+        </div>
+
+        <div class="row">
+          <section class="col-lg-12">
+            <div class="card card-primary card-outline">
+              <img src="{% static 'titanic/titanic_model.png' %}" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-text">Feature Relations</h5>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- /.row -->
+        <div class="row justify-content-center">
+          <div class="col-lg-4">
+            <form action='result/' method='post'>
+              {% csrf_token %}
+              {{form|crispy }}
+              <input type='submit' value="Submit">
+            </form>
+
+
+
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+
+{% endblock  %}
