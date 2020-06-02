@@ -9,8 +9,6 @@ from rest_framework import status
 from django.http import JsonResponse
 from rest_framework.parsers import JSONParser
 from . forms import TitanicForm
-from . models import titanic_guess
-from . serializers import titanic_guessSerializers
 from . import functions
 import os
 import pickle
@@ -67,9 +65,9 @@ def result(request):
 
 		return render(request, 'titanic/titanic_home.html', {'form': form})
 
-class Titanic_Guess_View(viewsets.ModelViewSet):
-	queryset = titanic_guess.objects.all()
-	serializer_class = titanic_guessSerializers
+# class Titanic_Guess_View(viewsets.ModelViewSet):
+# 	queryset = titanic_guess.objects.all()
+# 	serializer_class = titanic_guessSerializers
 		
 
 

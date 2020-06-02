@@ -3,7 +3,7 @@ from titanic import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('titanic', views.Titanic_Guess_View)
+
 
 app_name='titanic'
 urlpatterns = [

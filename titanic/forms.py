@@ -1,5 +1,5 @@
 from django import forms
-from . models import titanic_guess
+
 
 class TitanicForm(forms.Form):
 
