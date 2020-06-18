@@ -59,7 +59,6 @@ seaborn==0.10.0
 sqlparse
 tables==3.6.1
 Theano
-tifffile
 uritempalte
 urllib3
 webencodings
