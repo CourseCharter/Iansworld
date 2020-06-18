@@ -12,13 +12,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
-import django_heroku
+#import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
-#STATIC_DIR = os.path.join(BASE_DIR,"static")
+STATIC_DIR = os.path.join(BASE_DIR,"static")
 STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 STATIC_URL = "/static/"
 
@@ -33,10 +33,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "wt-0+fkmb+m)^c=whm@ha8g^!8^mbo
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "iansword.herokuapp.com",
-    ".herokuapp.com",
-    "localhost",
-    "127.0.0.1",
+    "*",
     ]
 
 
