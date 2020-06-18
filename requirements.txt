@@ -8,7 +8,7 @@ coreapi
 coreschema
 cycler
 decorator==4.4.1
-django==3.0.3
+django
 django-heroku
 djangorestframework==3.9.3
 django-crispy-forms==1.9.1
