@@ -1,21 +1,21 @@
-from joblib import load,dump
-import pandas as pd
-import numpy as np
-import pickle
-import json
-from sklearn import preprocessing
-from sklearn.preprocessing import StandardScaler
-from django.shortcuts import render
-from rest_framework import viewsets
-from rest_framework.decorators import api_view
-from django.core import serializers
-from django.contrib import messages
-from rest_framework.response import Response
-from rest_framework import status
-from django.http import JsonResponse
-import warnings
-warnings.filterwarnings("ignore")
-np.random.seed(42)
+# from joblib import load,dump
+# import pandas as pd
+# import numpy as np
+# import pickle
+# import json
+# from sklearn import preprocessing
+# from sklearn.preprocessing import StandardScaler
+# from django.shortcuts import render
+# from rest_framework import viewsets
+# from rest_framework.decorators import api_view
+# from django.core import serializers
+# from django.contrib import messages
+# from rest_framework.response import Response
+# from rest_framework import status
+# from django.http import JsonResponse
+# import warnings
+# warnings.filterwarnings("ignore")
+# np.random.seed(42)
 
 
 # def load_model():
@@ -38,11 +38,11 @@ np.random.seed(42)
 # 	return titanic_df
 
 #@api_view(["POST"])
-def survived(df):
-    print(df)
-    mdl=load("/Users/user/projects/iansworld/titanic/titanic_model.pkl")
-    sc=load("/Users/user/projects/iansworld/titanic/scalars.pkl")
-    df=sc.transform(df)
-    print(df)
-    y_pred=mdl.predict_classes(df)
-    return y_pred
+# def survived(df):
+#     print(df)
+#     mdl=load("/Users/user/projects/iansworld/titanic/titanic_model.pkl")
+#     sc=load("/Users/user/projects/iansworld/titanic/scalars.pkl")
+#     df=sc.transform(df)
+#     print(df)
+#     y_pred=mdl.predict_classes(df)
+#     return y_pred
