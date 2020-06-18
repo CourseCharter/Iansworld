@@ -65,38 +65,5 @@ def result(request):
 
 		return render(request, 'titanic/titanic_home.html', {'form': form})
 
-# class Titanic_Guess_View(viewsets.ModelViewSet):
-# 	queryset = titanic_guess.objects.all()
-# 	serializer_class = titanic_guessSerializers
-		
 
-
-# def titanic_page_guess(request):
-
-# 	if request.method =='POST':
-# 		form=TitanicForm(request.POST)
-# 		if form.is_valid():
-# 			sex=form.cleaned_data['sex']
-# 			pclass=form.cleaned_data['pclass']
-# 			age=form.cleaned_data['age']
-# 			relatives=form.cleaned_data['relatives']
-# 			fare=form.cleaned_data['fare']
-# 			myDict = (request.POST).dict()
-# 			df=pd.DataFrame(myDict, index=[0])
-# 			df=df.drop(['csrfmiddlewaretoken'], axis=1)
-# 			answer = functions.survived(df)
-# 			print(answer)
-# 			#messages.success(request, 'Guess Submitted.')
-# 			#messages.success(request, 'Your Fate: {}'.format(answer))
-# 			#this is causing a problem for multiple attempts. the guess is being submitted multiple times but the response cannot be rendered multiple times
-# 			#titanic_table=create_HTML_table(titanic_df(pd.read_csv('titanic/data.csv')))
-# 			context = {
-# 				'answer': answer,
-# 			}
-# 			return render(request, 'titanic/testform.html', {'context': context})
-
-# 	else:
-# 		form=TitanicForm()
-
-# 	return render(request, 'titanic/testform.html', {'form': form}) 
 
