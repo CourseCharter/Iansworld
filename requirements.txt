@@ -33,7 +33,7 @@ Keras-Preprocessing
 kiwisolver
 matplotlib==3.1.3
 MarkupSafe
-numpy==1.18.1
+numpy==1.22.0
 networkx
 numexpr
 packaging==19.1
