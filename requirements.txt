@@ -24,7 +24,7 @@ importlib-metadata
 inflection
 itypes
 Jinja2
-joblib==0.14.1
+joblib==1.2.0
 json5==0.9.1
 jsonschema==3.2.0
 Keras
